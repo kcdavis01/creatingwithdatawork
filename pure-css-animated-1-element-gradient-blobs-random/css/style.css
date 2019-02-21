@@ -1,0 +1,33 @@
+html {
+  background: linear-gradient(rgba(243, 243, 243, 0.9), rgba(243, 243, 243, 0.9)), url(https://image.freepik.com/free-vector/purple-planet-background_22191-41.jpg) 
+  background-blend-mode: normal, luminosity;
+  mix-blend-mode: multiply;
+}
+
+*, :after {
+  margin: 0;
+  height: 100%;
+}
+
+.blobs {
+  --gimg: radial-gradient(#000000 67%, rgba(0, 0, 0, 0) 68%);
+  background: linear-gradient(#ff1493 calc(50% - 13em), #ffff00 calc(50% + 13em));
+}
+.blobs:after {
+  display: block;
+  box-shadow: 0 0 0 10px #fff;
+  background: var(--gimg), var(--gimg), var(--gimg), var(--gimg), var(--gimg), var(--gimg), var(--gimg) #fff;
+  background-position: 50%, calc(50% + -6.47214em) calc(50% + -4.70228em), calc(50% + 2.92541em) calc(50% + 2.72799em), calc(50% + 3.52671em) calc(50% + -4.8541em), calc(50% + 7.87158em) calc(50% + -4.36329em), calc(50% + -1.52647em) calc(50% + 7.85302em), calc(50% + -0.93861em) calc(50% + -5.92613em);
+  background-repeat: no-repeat;
+  background-size: 13em 13em, 8em 8em, 8em 8em, 10em 10em, 8em 8em, 6em 6em, 9em 9em;
+  filter: blur(5px) contrast(9);
+  mix-blend-mode: lighten;
+  animation: ani 1s cubic-bezier(0.5, -1, 0, 1) infinite alternate;
+  content: "";
+}
+
+@keyframes ani {
+  0% {
+    background-position: 50%, 50%, 50%, 50%, 50%, 50%, 50%;
+  }
+}
